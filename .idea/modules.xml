@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DiabetesAndroidApp.iml" filepath="$PROJECT_DIR$/DiabetesAndroidApp.iml" group="DiabetesAndroidApp" />
+      <module fileurl="file://$PROJECT_DIR$/MPChartLib/MPChartLibb.iml" filepath="$PROJECT_DIR$/MPChartLib/MPChartLibb.iml" group="DiabetesAndroidApp/MPChartLibb" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="DiabetesAndroidApp/app" />
+    </modules>
+  </component>
+</project>

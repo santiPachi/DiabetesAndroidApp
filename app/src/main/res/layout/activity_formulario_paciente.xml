@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_gradient"
+    tools:context=".View.FormularioPaciente">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Teléfono"
+        android:textColor="@color/colorLetraTitulo"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6med"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9med"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5med" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contraseña"
+        android:textColor="@color/colorLetraTitulo"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10med"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9med"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6med" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edad"
+        android:textColor="@color/colorLetraTitulo"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9med"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10med" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexo"
+        android:textColor="@color/colorLetraTitulo"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9med"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <EditText
+        android:id="@+id/et_telefono_paciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/form_historial"
+        android:ems="10"
+        android:hint="09934532234"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorLetraTitulo"
+        android:textColorHint="@color/colorClearGray"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6med"
+        app:layout_constraintStart_toStartOf="@+id/guideline9med"
+        app:layout_constraintTop_toTopOf="@+id/guideline5med"
+        app:layout_constraintVertical_bias="0.447" />
+
+    <EditText
+        android:id="@+id/et_edad_paciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/form_historial"
+        android:ems="10"
+        android:hint="20"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorLetraTitulo"
+        android:textColorHint="@color/colorClearGray"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9med"
+        app:layout_constraintTop_toTopOf="@+id/guideline10med"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <EditText
+        android:id="@+id/et_contraseia_paciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/form_historial"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorLetraTitulo"
+        android:textColorHint="@color/colorClearGray"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10med"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9med"
+        app:layout_constraintTop_toTopOf="@+id/guideline6med" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Cedula"
+
+        android:textColor="@color/colorLetraTitulo"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline5med"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9med"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4med" />
+
+    <EditText
+        android:id="@+id/et_cedula_paciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/form_historial"
+        android:ems="10"
+        android:hint="1109343234"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorLetraTitulo"
+        android:textColorHint="@color/colorClearGray"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5med"
+        app:layout_constraintStart_toStartOf="@+id/guideline9med"
+        app:layout_constraintTop_toTopOf="@+id/guideline4med" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Apellido"
+        android:textColor="@color/colorLetraTitulo"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4med"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9med"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3med" />
+
+    <EditText
+        android:id="@+id/et_apellido_paciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/form_historial"
+        android:ems="10"
+        android:hint="Davalos"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorLetraTitulo"
+        android:textColorHint="@color/colorClearGray"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4med"
+        app:layout_constraintStart_toStartOf="@+id/guideline9med"
+        app:layout_constraintTop_toTopOf="@+id/guideline3med" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Nuevo Paciente"
+            android:textColor="@color/colorLetraTitulo"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2med"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="117dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3med"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="186dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4med"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="252dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5med"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="311dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6med"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="365dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline9med"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="148dp" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Nombre"
+        android:textColor="@color/colorLetraTitulo"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3med"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9med"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2med" />
+
+    <EditText
+        android:id="@+id/et_nombre_paciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/form_historial"
+        android:ems="10"
+        android:hint="Mauricio"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorLetraTitulo"
+        android:textColorHint="@color/colorClearGray"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3med"
+        app:layout_constraintStart_toStartOf="@+id/guideline9med"
+        app:layout_constraintTop_toTopOf="@+id/guideline2med" />
+
+    <Button
+        android:id="@+id/bt_guardar_paciente"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/buttonlogin_back"
+        android:text="Guardar"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline10med"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="308dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="423dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="479dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="546dp" />
+
+    <Spinner
+        android:id="@+id/spinner_sexo"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9med"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+    <!--        android:background="@drawable/formu_edit_text"-->
+    <!--        android:autofillHints="Sexo"-->
+
+    <!--        android:outlineSpotShadowColor="@color/colorBlack"-->
+    app:layout_constraintBottom_toTopOf="@+id/guideline10"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/guideline9med"
+    app:layout_constraintTop_toTopOf="@+id/guideline6" />
+</android.support.constraint.ConstraintLayout>

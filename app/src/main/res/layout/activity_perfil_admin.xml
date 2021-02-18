@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/back_gradient"
+    android:layout_height="match_parent"
+    tools:context=".View.PerfilAdmin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="539dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/tx_nombre_admin"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Nombre"
+            android:textColor="@color/colorLetraTitulo"
+            android:textStyle="bold"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/tx_apellido_admin"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Apellido"
+            android:textColor="@color/colorLetraTitulo"
+            android:textStyle="bold"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_perm_identity_black_24dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/bt_medicos_admin"
+            android:layout_width="135dp"
+            android:layout_height="80dp"
+            android:background="@drawable/buttonlogin_back"
+            android:text="Doctores
+"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="135dp"
+            android:layout_height="80dp"
+            android:background="@drawable/buttonlogin_back"
+            android:text="Pacientes"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:id="@+id/bt_pacientes_admin"/>
+
+        <Button
+            android:id="@+id/bt_ajustes_medico"
+            android:layout_width="135dp"
+            android:layout_height="80dp"
+            android:background="@drawable/buttonlogin_back"
+            android:drawableLeft="@drawable/ic_settings_black_24dp"
+            android:text="Ajustes"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

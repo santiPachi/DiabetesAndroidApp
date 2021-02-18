@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.diabetes">
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- Internet Permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".View.HistorialDosis"></activity>
+        <activity android:name=".View.FormularioDosis" />
+        <activity android:name=".View.RevisarControl" />
+        <activity android:name=".View.CamaraCalorias" />
+        <activity android:name=".View.FormularioDoctor" />
+        <activity android:name=".View.HistorialDoctores" />
+        <activity android:name=".View.PerfilAdmin" />
+        <activity android:name=".View.GraficasActivity" />
+        <activity android:name=".View.FormularioPaciente" />
+        <activity android:name=".View.HistorialPacientes" />
+        <activity android:name=".View.PerfilDoctor" />
+        <activity android:name=".View.BitacoraPaciente" />
+        <activity android:name=".View.FormularioGlicemia" />
+        <activity android:name=".View.HistorialGlicemia" />
+        <activity android:name=".View.Perfil" />
+        <activity
+            android:name=".View.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".View.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.diabetes.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

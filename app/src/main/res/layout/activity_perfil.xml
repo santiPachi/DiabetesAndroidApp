@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/back_gradient"
+    android:layout_height="match_parent"
+    tools:context=".View.Perfil">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="539dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+
+
+        <TextView
+            android:id="@+id/tx_nombre"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Nombre"
+            android:textColor="@color/colorLetraTitulo"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tx_apellido"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Apellido"
+            android:textColor="@color/colorLetraTitulo"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_semaforo"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/verde" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tx_nph_perfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Nph 0"
+                android:textColor="@color/colorLetraGray"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="UI"
+                android:textColor="@color/colorLetraTitulo"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tx_rapida_perfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Rapida 0"
+                android:textColor="@color/colorLetraGray"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="UI"
+                android:textColor="@color/colorLetraTitulo"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/guideline8"
+                app:layout_constraintStart_toEndOf="@+id/tx_edad_paciente"
+                app:layout_constraintTop_toTopOf="@+id/guideline7"
+                app:layout_constraintVertical_bias="0.636" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/bt_glicemia"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/buttonlogin_back"
+            android:drawableLeft="@drawable/ic_create_black_24dp"
+            android:text="Glicemia"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/bt_historial"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/buttonlogin_back"
+            android:text="Bitácora"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17dp" />
+        <Button
+            android:id="@+id/bt_contador_cal"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/buttonlogin_back"
+            android:text="Calorias"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/bt_ajustes"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="@drawable/buttonlogin_back"
+            android:drawableLeft="@drawable/ic_settings_black_24dp"
+            android:text="Ajustes"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
