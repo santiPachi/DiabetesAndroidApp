@@ -1,8 +1,11 @@
 package com.example.diabetes.Mediator;
 
+import android.widget.Toast;
+
 import com.example.diabetes.Modelo.Control;
 import com.example.diabetes.Modelo.Doctor;
 import com.example.diabetes.Modelo.Dosis;
+import com.example.diabetes.Modelo.Glicemia;
 import com.example.diabetes.Network.Gestion.GestionControl;
 import com.example.diabetes.Network.Gestion.GestionDosis;
 import com.example.diabetes.Network.Gestion.GestionGlicemia;
@@ -15,6 +18,8 @@ import com.example.diabetes.View.FormularioDosis;
 import com.example.diabetes.View.FormularioGlicemia;
 import com.example.diabetes.View.FormularioPaciente;
 import com.example.diabetes.View.RevisarControl;
+import com.example.diabetes.utils.Error;
+import com.example.diabetes.utils.Validate;
 
 public class MediatorAlta implements Mediator {
     public FormularioPaciente formularioPaciente;
@@ -48,17 +53,26 @@ public class MediatorAlta implements Mediator {
         if (evento.equals( "GuardarPaciente")){
             GestionPaciente gestionPaciente = new GestionPaciente(this);
             Paciente paciente = new Paciente(0,"3",
-                                                            formularioPaciente.getEtCedula().getText().toString(),
-                                                            formularioPaciente.getEtNombre().getText().toString(),
-                                                            0,
-                                                            formularioPaciente.getEtApellido().getText().toString(),
-                                                            formularioPaciente.getEtNombre().getText().toString(),
-                                                            formularioPaciente.getEtTelefono().getText().toString(),
-                                                            0,
-                                                            Integer.parseInt(formularioPaciente.getEtEdad().getText().toString()),
-                                                            String.valueOf(formularioPaciente.getSpinnerSexo().getSelectedItem().toString().charAt(0)),1);
-            Singleton.paciente = paciente;
-            gestionPaciente.guardarPaciente(paciente,formularioPaciente.getEtContrasenia().getText().toString());
+                    formularioPaciente.getEtCedula().getText().toString(),
+                    formularioPaciente.getEtNombre().getText().toString(),
+                    0,
+                    formularioPaciente.getEtApellido().getText().toString(),
+                    formularioPaciente.getEtNombre().getText().toString(),
+                    formularioPaciente.getEtTelefono().getText().toString(),
+                    0,
+                    Integer.parseInt(formularioPaciente.getEtEdad().getText().toString()),
+                    String.valueOf(formularioPaciente.getSpinnerSexo().getSelectedItem().toString().charAt(0))
+                    ,1,
+                    formularioPaciente.getEtContrasenia().getText().toString());
+            Error error = Validate.validatePaciente(paciente);
+            if(error.getValidate()) {
+                Singleton.paciente = paciente;
+                gestionPaciente.guardarPaciente(paciente);
+            }else{
+                Toast toast1 = Toast.makeText(formularioPaciente.getApplicationContext(),
+                        error.getMessage(), Toast.LENGTH_SHORT);
+                toast1.show();
+            }
 
         }
         else if (evento.equals("GuardarDoctor")){
@@ -90,8 +104,16 @@ public class MediatorAlta implements Mediator {
                 opcion = 2;
             if(formularioGlicemia.spinnerHorario.getSelectedItem().toString().equals("Merienda"))
                 opcion = 3;
-            Singleton.paciente.setNivelGlucosa(Double.valueOf(formularioGlicemia.etNivelGlucosa.getText().toString()));
-            getionGlicemia.guardarGlicemia(Integer.parseInt(formularioGlicemia.etNivelGlucosa.getText().toString()),opcion);
+           Error error =  Validate.validateGlicemia(formularioGlicemia.etNivelGlucosa.getText().toString());
+           if(error.getValidate()) {
+               Singleton.paciente.setNivelGlucosa(Double.valueOf(formularioGlicemia.etNivelGlucosa.getText().toString()));
+
+               getionGlicemia.guardarGlicemia(Integer.parseInt(formularioGlicemia.etNivelGlucosa.getText().toString()), opcion);
+           }else{
+               Toast toast1 = Toast.makeText(formularioPaciente.getApplicationContext(),
+                       error.getMessage(), Toast.LENGTH_SHORT);
+               toast1.show();
+           }
         }
 
     }

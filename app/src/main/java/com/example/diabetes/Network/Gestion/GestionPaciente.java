@@ -39,7 +39,7 @@ public class GestionPaciente   {
     public GestionPaciente(MediatorAlta mediatorPerfil) {
         this.mediatorAlta = mediatorPerfil;
     }
-    public void guardarPaciente(Paciente paciente, String password){
+    public void guardarPaciente(Paciente paciente){
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
@@ -50,7 +50,7 @@ public class GestionPaciente   {
 
         PacienteInterfaceApi pacienteInterfaceApi = retrofit.create(PacienteInterfaceApi.class);
 
-        Call<ResponseBody> call = pacienteInterfaceApi.guardarPaciente(paciente.getNombre_pac(),paciente.getUrgente(),paciente.getTipoUsuario(),paciente.getCedula_pac(),paciente.getApellido_pac(),paciente.getNombreUsuario(),password,paciente.getTelefono_pac(),paciente.getEdad_pac(),paciente.getNivelGlucosa(),paciente.getSexo_pac(),1);
+        Call<ResponseBody> call = pacienteInterfaceApi.guardarPaciente(paciente.getNombre_pac(),paciente.getUrgente(),paciente.getTipoUsuario(),paciente.getCedula_pac(),paciente.getApellido_pac(),paciente.getNombreUsuario(),paciente.getPassword(),paciente.getTelefono_pac(),paciente.getEdad_pac(),paciente.getNivelGlucosa(),paciente.getSexo_pac(),1);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

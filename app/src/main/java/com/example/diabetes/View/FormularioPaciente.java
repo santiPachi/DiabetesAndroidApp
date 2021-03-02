@@ -48,8 +48,8 @@ public class FormularioPaciente extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mediatorPerfil.notificar("GuardarPaciente");
-                Intent intent = new Intent(getApplicationContext(), FormularioDosis.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getApplicationContext(), FormularioDosis.class);
+//                startActivity(intent);
             }
         });
 

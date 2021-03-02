@@ -31,6 +31,7 @@
             android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
             android:hint="Cedula"
             android:padding="5dp"
+            android:text="887798"
             android:textColor="@color/colorLetraTitulo"
             android:textColorHint="@color/colorBlack" />
 
@@ -41,9 +42,10 @@
             android:layout_marginTop="30dp"
             android:background="@drawable/textbox_back"
             android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
-            android:hint="Contraseña"
+            android:hint="Password"
             android:inputType="textPassword"
             android:padding="5dp"
+            android:text="manchester"
             android:textColor="@color/colorLetraTitulo"
             android:textColorHint="@color/colorBlack" />
 

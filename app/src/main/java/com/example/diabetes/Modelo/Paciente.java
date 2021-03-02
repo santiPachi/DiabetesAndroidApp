@@ -28,11 +28,13 @@ public class Paciente implements Serializable {
     private int edad_pac;
     @SerializedName("sexo_pac")
     private String sexo_pac;
+    @SerializedName("password")
+    private String password;
     @SerializedName(("id_doc"))
     private Integer id_doc;
     public Paciente(){};
 
-    public Paciente(Integer id_pac, String tipoUsuario, String cedula_pac, String nombre_pac, Integer urgente, String apellido_pac, String nombreUsuario, String telefono_pac, double nivelGlucosa, int edad_pac, String sexo_pac, Integer id_doc) {
+    public Paciente(Integer id_pac, String tipoUsuario, String cedula_pac, String nombre_pac, Integer urgente, String apellido_pac, String nombreUsuario, String telefono_pac, double nivelGlucosa, int edad_pac, String sexo_pac, Integer id_doc,String password) {
         this.id_pac = id_pac;
         this.tipoUsuario = tipoUsuario;
         this.cedula_pac = cedula_pac;
@@ -45,27 +47,20 @@ public class Paciente implements Serializable {
         this.edad_pac = edad_pac;
         this.sexo_pac = sexo_pac;
         this.id_doc = id_doc;
+        this.password = password;
     }
 
     public Integer getUrgente() {
         return urgente;
     }
 
-    public void setUrgente(Integer urgente) {
-        this.urgente = urgente;
-    }
+
 
     public Integer getId_pac() {
         return id_pac;
     }
 
-    public Integer getId_doc() {
-        return id_doc;
-    }
 
-    public void setId_doc(Integer id_doc) {
-        this.id_doc = id_doc;
-    }
 
     public void setId_pac(Integer id_pac) {
         this.id_pac = id_pac;
@@ -75,48 +70,24 @@ public class Paciente implements Serializable {
         return tipoUsuario;
     }
 
-    public void setTipoUsuario(String tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
-    }
-
     public String getCedula_pac() {
         return cedula_pac;
-    }
-
-    public void setCedula_pac(String cedula_pac) {
-        this.cedula_pac = cedula_pac;
     }
 
     public String getNombre_pac() {
         return nombre_pac;
     }
 
-    public void setNombre_pac(String nombre_pac) {
-        this.nombre_pac = nombre_pac;
-    }
-
     public String getApellido_pac() {
         return apellido_pac;
-    }
-
-    public void setApellido_pac(String apellido_pac) {
-        this.apellido_pac = apellido_pac;
     }
 
     public String getNombreUsuario() {
         return nombreUsuario;
     }
 
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
-
     public String getTelefono_pac() {
         return telefono_pac;
-    }
-
-    public void setTelefono_pac(String telefono_pac) {
-        this.telefono_pac = telefono_pac;
     }
 
     public double getNivelGlucosa() {
@@ -131,15 +102,15 @@ public class Paciente implements Serializable {
         return edad_pac;
     }
 
-    public void setEdad_pac(int edad_pac) {
-        this.edad_pac = edad_pac;
-    }
-
     public String getSexo_pac() {
         return sexo_pac;
     }
 
-    public void setSexo_pac(String sexo_pac) {
-        this.sexo_pac = sexo_pac;
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
