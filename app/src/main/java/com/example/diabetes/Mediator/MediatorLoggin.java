@@ -33,7 +33,7 @@ public class MediatorLoggin implements Mediator {
                 loggin.verifyLoggin("1723305254","medicina");
             }else if (mainActivity.getEtNombreUsuario().getText().toString().equals("admin")){
                 Loggin loggin = new Loggin(this);
-                loggin.verifyLoggin("324323423","bikes");
+                loggin.verifyLoggin("1750428227","lduquito");
             }else{
                 Loggin loggin = new Loggin(this);
                 loggin.verifyLoggin("887798","manchester");
